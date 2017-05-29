@@ -1,0 +1,105 @@
+.js-row{
+    display: flex;
+    margin: 0 -10px;
+}
+.js-column {
+    vertical-align: middle;
+    display: flex;
+    flex: 1;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.js-column.rand-2{
+    flex: 2;
+}
+
+.js-column > .item {
+    position: relative;
+    flex: 1;
+    padding: 10px;
+    border:solid 1px #dadada;
+}
+.js-column > .item:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.js-column > .item h2 {
+    padding: .2em 0 0;
+}
+
+.js-column > .item time {
+    color: #767676;
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 767px){
+    .js-row {
+        display: block !important;
+        margin: 0;
+    }
+    .js-column {
+        width: 100% !important;
+        padding: 0 !important;
+        display: block !important;
+        margin: 0;
+    }
+    .js-column > .item {
+        display: block;
+        width: 100%;
+        border: none;
+    }
+    .js-column > .item {
+        border-top: solid 1px #dadada !important;
+    }
+    .js-column > .item .hd > h2 {
+        font-size: 18px;
+    }
+
+    .js-column > .item.is_img .img {
+        width: 25%;
+        float: left;
+    }
+    .js-column > .item.is_img .hd , .js-column > .item.is_img .bd {
+        width: 75%;
+        float: right;
+        padding-left: 10px;
+    }
+
+    .js-column > .item .bd{
+        padding-right: 40px;
+    }
+
+    .js-column > .item .bd p {
+        margin-bottom: 0;
+    }
+
+    .js-column > .item .bd .link-more {
+        position: absolute;
+        right: 0;
+        top:0;
+        bottom:0;
+        width: 40px;
+    }
+    .js-column > .item .bd .link-more:before {
+        font-family: dashicons;
+        content: '\f345';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        line-height: 30px;
+        top:0;
+        bottom: 0;
+        left:0;
+        right: 0;
+        margin: auto;
+    }
+
+    .hide-for-small{
+        display: none !important;
+    }
+}
+
